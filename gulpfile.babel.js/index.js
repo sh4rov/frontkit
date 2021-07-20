@@ -8,6 +8,7 @@ import scripts from './tasks/scripts'
 import fonts from './tasks/fonts'
 import deploy from './tasks/deploy'
 import images from './tasks/images'
+import video from './tasks/video'
 
 export {
   styles,
@@ -17,18 +18,19 @@ export {
   serve,
   deploy,
   fonts,
-  images
+  images,
+  video,
 }
 
-export const dev = series(
-  clean,
-  parallel(
-    styles,
-    views,
-    scripts,
-    fonts,
-  ),
-  serve
+export const staticFiles = parallel(
+  styles,
+  views,
+  scripts,
+  fonts,
+  images,
+  video
 )
 
+export const dev = series(staticFiles, serve)
+export const build = series(clean, staticFiles)
 export default dev
