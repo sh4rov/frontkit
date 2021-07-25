@@ -11,7 +11,6 @@ import styles from './styles'
 import scripts from './scripts'
 import images from './images'
 import video from './video'
-import remember from 'gulp-remember';
 
 const serve = () => {
   bs.init({

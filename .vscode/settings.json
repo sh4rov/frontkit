@@ -4,6 +4,9 @@
     ".prettierignore.yml": true,
     ".gitignore": true,
     "prettierrc.yml": true,
-    "package-lock.json": true
+    "package-lock.json": true,
+    "node_modules": true,
+    ".vscode": true,
+    "dist": true
   }
 }

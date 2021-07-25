@@ -1,12 +1,14 @@
-@@include('head/_head.html', {
-  
-})
-
-
-
-  <!-- header подключен в hero -->
-  @@include('modules/hero/_hero.html')
-
-  <main class='page__content'></main>
-
-@@include('foot/_foot.html')
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="@@webRoot/css/main.min.css">
+  <title>Page title</title>
+</head>
+<body class="page__body">
+  @@include('modules/header/_header.html')
+  @@include('modules/footer/_footer.html')
+</body>
+</html>
