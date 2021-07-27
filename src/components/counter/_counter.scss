@@ -1,0 +1,16 @@
+@use '../../../node_modules/sass-rem/' as *;
+.counter {
+  display: inline-flex;
+  flex-flow: column;
+  padding: 20px 30px;
+  background-color: var(--color-dark);
+
+  &:not(:last-of-type) {
+    margin-right: 30px;
+  }
+
+  &__value {
+    font-size: rem(36px);
+    color: currentColor;
+  }
+}
