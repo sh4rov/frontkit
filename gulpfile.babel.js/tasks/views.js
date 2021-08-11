@@ -3,7 +3,6 @@ import fileinclude from 'gulp-file-include'
 import plumber from 'gulp-plumber'
 import debug from 'gulp-debug'
 import strip from 'gulp-strip-comments'
-
 import paths from '../paths'
 
 const views = () => {
