@@ -1,6 +1,6 @@
 import { src, dest, lastRun } from 'gulp'
 import sass from 'gulp-dart-sass'
-import postcss from 'postcss'
+import postcss from 'gulp-postcss'
 import cssnano from 'cssnano'
 import autoprefixer from 'autoprefixer'
 import changed from 'gulp-changed'
@@ -16,6 +16,7 @@ const styles = () => {
 
   const plugins = [
     autoprefixer(),
+    cssnano()
   ];
 
   return src(paths.styles.main, { sourcemaps: true })
